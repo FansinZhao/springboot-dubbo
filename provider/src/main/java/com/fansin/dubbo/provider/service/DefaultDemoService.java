@@ -1,10 +1,10 @@
-package com.fansin.dubbo.provider.service.impl;
+package com.fansin.dubbo.provider.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.fansin.dubbo.provider.service.DemoService;
+import com.fansin.dubbo.api.DemoService;
 
 /**
- * <p>Title: DemoServiceImpl</p>
+ * <p>Title: DefaultDemoService</p>
  * <p>Description: </p>
  *
  * @author zhaofeng
@@ -17,9 +17,9 @@ import com.fansin.dubbo.provider.service.DemoService;
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
 )
-public class DemoServiceImpl implements DemoService {
+public class DefaultDemoService implements DemoService {
     @Override
     public String sayHello(String name) {
-        return null;
+        return "[服务端] 接收到客户端的:"+name;
     }
 }

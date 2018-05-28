@@ -1,5 +1,8 @@
-package com.fansin.dubbo.consumer.service;
+package com.fansin.dubbo.api;
 
+/**
+ * @author zhaofeng
+ */
 public interface DemoService {
 
     String sayHello(String name);
